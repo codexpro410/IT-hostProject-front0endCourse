@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- https://preview.colorlib.com/#ithost -->
+
+    <!-- OWL CARUOSEL -->
+    <!-- https://www.youtube.com/watch?v=r5IPNFsTNRs -->
+    <link rel="stylesheet" href="owlCarousel/owl.carousel.css">
+    <link rel="stylesheet" href="owlCarousel/owl.theme.css">
+
+    <style>
+        :root{
+            --red:#eb2b63;
+        }
+/* OWL */
+body{
+    margin: 0   auto;
+    width: 600px;
+}
+.owl-carousel .owl-item{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.owl-theme {
+    position: relative;
+}
+
+.owl-theme .owl-controls{
+    display: flex;
+    position: absolute;
+    left: 0;
+    /* width: 100px; */
+}
+.owl-pagination{
+    display: flex;
+    justify-content: flex-start;
+    width: 400px;
+}
+.owl-theme .owl-controls .owl-page span{
+    background-color:var(--red);
+}
+
+#owl-demo .slide{
+    position: relative;
+}
+.slide .text{
+    /* width: 480px; */
+    height: 150px;
+    background-color: #eef6f9;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding:10px;
+    line-height: 1.5;
+}
+#owl-demo .slide .profile{
+    display: flex;
+    /* position: absolute;   */
+    /* right: 120px; */
+    justify-content: flex-end;
+}
+#owl-demo .slide .profile .name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#owl-demo .slide .profile img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="slide slide1">
+            <div class="text">
+                Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iacu-lis.Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. iaculis.
+            </div>
+            <div class="profile">
+                <div class="name">
+                    <p>Islam Abozeed</p>
+                    <p>Client</p>
+                </div>
+                <img src="img/1.jpg" alt="">
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="text">
+                Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iacu-lis.Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. iaculis.
+            </div>
+            <div class="profile">
+                <div class="name">
+                    <p>Islam Mostafa</p>
+                    <p>ENG</p>
+                </div>
+                <img src="img/1.jpg" alt="">
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="text">
+                Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. Etiam pretium turpis eget nibh laoreet iacu-lis.Nullam lacinia ex eleifend orci porttitor, suscipit interdum augue condimentum. iaculis.
+            </div>
+            <div class="profile">
+                <div class="name">
+                    <p>Islam Mostafa</p>
+                    <p>ENG</p>
+                </div>
+                <img src="img/1.jpg" alt="">
+            </div>
+        </div>
+        Made with love to my Near Friend, hope you great && Best live &hearts;
+    </div>
+
+
+
+    
+<!-- OWL CARUOSEL -->
+<script src="owlCarousel/jquery-1.9.1.min.js"></script>
+<script src="owlCarousel/owl.carousel.js"></script>
+
+<script>
+    $(document).ready(function() {
+ 
+ $("#owl-demo").owlCarousel({
+
+     navigation : true, // Show next and prev buttons
+
+     autoPlay : true,
+     slideSpeed : 300,
+     paginationSpeed : 400,
+
+     items : 1, 
+     itemsDesktop : false,
+     itemsDesktopSmall : false,
+     itemsTablet: false,
+     itemsMobile : false,
+
+         //Lazy load
+    lazyLoad : true,
+    lazyFollow : true,
+    lazyEffect : "fade",
+
+ });
+});
+</script>
+    
+</body>
+</html>
