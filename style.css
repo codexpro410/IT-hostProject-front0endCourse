@@ -28,6 +28,13 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+nav a{
+    display: none;
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .logo img{
     width: 110px;
     height: 48px;
@@ -47,6 +54,10 @@ li:hover{
 }
 .list li{
      font-size: 16px;
+}
+.flex{
+    display: flex;
+    gap: 10px;
 }
 button{
     background-color: var(--red);
@@ -71,6 +82,12 @@ button:hover{
 }
 .art1{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
 }
 .header .art1 h1{
     font-size: 90px;
@@ -80,6 +97,7 @@ button:hover{
 .header .art1 p{
     font-size: 18px;
 }
+
 .topArticle{
     display: flex;
     flex-direction: column;
@@ -105,9 +123,11 @@ button:hover{
 }
 .sec1 .icons{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
+
 .sec1 .icon{
     display: flex;
     flex-direction: column;
@@ -157,6 +177,7 @@ button:hover{
 }
 .sec2 .search .searchInputs{
     display: flex;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
 }
@@ -176,10 +197,13 @@ button:hover{
     margin-top: 40px;
     color: white;
 }
+
+
 /* Search youtube */
 .sec3{
     height: 555px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     /* padding:0 10%; */
@@ -303,11 +327,14 @@ button:hover{
 }
 
 
+
+
 .sec4{
   padding-bottom: 105px;
 }
 .plans{
     display: flex;
+    flex-wrap:wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -354,6 +381,7 @@ footer{
     background: url(img/banner-bg.jpg);
     height: 280px;
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -367,6 +395,7 @@ footer{
     height: 518px;
     background-color: #200545;
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-around;
     align-items: flex-start;
 
@@ -402,12 +431,14 @@ footer{
     color: var(--red);
 }
 .bottomFooter{
-    padding:0 5% ;
-   background-color: #1b043b ;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   color: white;
+    /* padding:0 5% ; */
+    background-color: #1b043b ;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
 }
 .bottomFooter .right{
     justify-content: flex-end;
@@ -418,4 +449,85 @@ footer{
 /* Need to know who gave P any margin */
 p{
     margin: 0;
+}
+
+
+/* Responsive */
+@media (max-width:1000px){
+    nav li,.art2{
+        display: none;
+    }
+    nav a#hamburger{
+        display: block;
+    }
+    .art1,.art1 h1{
+        font-size: 50px !important;
+        text-align: center;
+        width: 100%;
+    }
+    .sec1{
+        height: 100%;
+    }
+    .sec2{
+        text-align: center;
+    }
+    .sec2 .search .searchInputs input{
+        width: calc(100% - 10px);
+    }
+    .searchInputs button{
+        margin-top: 10px;
+    }
+    .sec3 .percent{
+        display: none;
+    }
+    .sec3 .wrapper{
+        width: 100%;
+    }
+    .MiddleFooter{
+        height: auto;
+    }   
+    .bottomFooter{
+        text-align: center;
+        justify-content: center;
+    }
+    body{
+        overflow-x: hidden;
+    }
+}
+@media (max-width:450px){
+    nav li, nav button{
+        display: none;
+    }
+    nav{
+        /* flex-direction: column; */
+    }
+    nav ul{
+        /* flex-direction: column; */
+    }
+    nav li{
+        /* display: flex; */
+        flex-direction: column;
+        
+    }
+    nav a#hamburger{
+        display: block;
+    }
+    .art1,.art1 h1{
+        width: 100%;
+        text-align: center;
+        font-size: 40px !important;
+    }
+    .owl-buttons{
+        display: none;
+    }
+    .topFooter{
+        text-align: center;
+    }
+
+    .MiddleFooter .div1,.MiddleFooter .div2, .MiddleFooter .div3{
+        width: 100%;
+    }
+    .bottomFooter .right li{
+        display: none;
+    }
 }
